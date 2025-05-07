@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live APR Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Live APR Calculator</h1>
+
+    <label for="amount">USDT Amount:</label>
+    <input id="amount" type="number" placeholder="Enter amount" />
+
+    <label for="duration">Staking Duration:</label>
+    <select id="duration">
+      <option disabled selected>Select Duration</option>
+      <option>1 Month</option>
+      <option>3 Months</option>
+      <option>6 Months</option>
+      <option>12 Months</option>
+    </select>
+
+    <div id="result" class="result hidden">
+      <p><strong>Estimated APR:</strong> <span id="apr">-</span>%</p>
+      <p><strong>Estimated Rewards:</strong> <span id="reward">-</span> USDT</p>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
