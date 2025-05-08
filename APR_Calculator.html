@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WStaking – Smart APR Calculator</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #00ffff;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    table {
+      width: 300px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      border: 1px solid #00ffff;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #00ffff;
+    }
+
+    .banner {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,255,255,0.3);
+    }
+
+    button {
+      background-color: #00ffff;
+      color: #000;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #00dddd;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #1a1a1a;
+      margin: auto;
+      padding: 0;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 850px;
+      height: 600px;
+      box-shadow: 0 0 25px rgba(0,255,255,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .close {
+      color: #fff;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 99999;
+    }
+
+    .close:hover {
+      color: #ff4444;
+    }
+
+    ul {
+      margin: 20px auto;
+      max-width: 800px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: '✅';
+      color: #00ffff;
+      margin-right: 10px;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="./wstakinglogonobackground.png" alt="WStaking Logo" width="70" style="vertical-align: middle;">
+  <h1 style="display: inline-block; margin-left: 15px;">WStaking – Intelligent Crypto Staking</h1>
+
+  <img src="https://github.com/user-attachments/assets/a4fb40bc-0e29-4d2d-9f28-23c6d264ab96" class="banner" alt="WStaking Banner" />
+
+  <p class="center"><strong>Smart staking with optimized returns – built for long-term growth.</strong></p>
+
+  <h2>🚀 How It Works</h2>
+  <ul>
+    <li>Connect your wallet on <a href="https://wstaking.net" target="_blank">wstaking.net</a></li>
+    <li>Stake USDT with your chosen duration</li>
+    <li>Claim APR rewards anytime</li>
+  </ul>
+
+  <h2>📅 Staking Duration & APR</h2>
+  <table>
+    <thead>
+      <tr><th>Duration</th><th>APR Range</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1 Month</td><td>🔹 10%</td></tr>
+      <tr><td>3 Months</td><td>🔸 12% – 15%</td></tr>
+      <tr><td>6 Months</td><td>🟠 15% – 24%</td></tr>
+      <tr><td>12 Months</td><td>🟢 24% – 36%</td></tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li>Minimum stake: 10 USDT</li>
+    <li>APR increases as you stake more</li>
+    <li>Max APR unlocked at 10,000 USDT+</li>
+  </ul>
+
+  <div class="center">
+    <button onclick="openAPRModal()">💡 Launch APR Calculator</button>
+  </div>
+
+  <div id="aprModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAPRModal()">&times;</span>
+      <iframe src="https://whalestrategy.github.io/WStakingAPR/" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openAPRModal() {
+      document.getElementById("aprModal").style.display = "block";
+    }
+    function closeAPRModal() {
+      document.getElementById("aprModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById("aprModal");
+      if (event.target === modal) {
+        closeAPRModal();
+      }
+    };
+  </script>
+
+  <h2>🔁 Auto-Renew & Rewards</h2>
+  <ul>
+    <li>Stakes auto-renew with no penalty</li>
+    <li>Claim rewards after renewal anytime</li>
+  </ul>
+
+  <h2>⚠️ Early Unstake Policy</h2>
+  <ul>
+    <li>10% penalty on early unstake</li>
+    <li>7–10 day processing time</li>
+  </ul>
+
+  <h2>🎉 Community & Campaigns</h2>
+  <ul>
+    <li>Past: 1000 USDT Airdrop 🪂</li>
+    <li>Join us on <a href="https://www.instagram.com/wstaking_net/" target="_blank">Instagram @wstaking_net</a></li>
+    <li>Influencer/KOL partnership welcome</li>
+  </ul>
+
+</body>
+</html>
