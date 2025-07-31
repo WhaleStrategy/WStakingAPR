@@ -13,7 +13,7 @@ async function fetchAPR() {
     return;
   }
 
-  const res = await fetch("https://58875109245c.ngrok-free.app/api/calculate", {
+  const res = await fetch("https://2466f7747f4b.ngrok-free.app/api/calculate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ amount, duration })
